@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <title>Ibs-Todo</title>
+</head>
+
+<body>
+
+   <div class="container">
+
+      <div class="header"><span today></span>
+         <i class="fa fa-refresh reset" onclick="reset()"></i>
+         <div class="sortList" sortList>
+            <div class="radio">
+               <i class="fa fa-sort">Sort: </i>
+               <input type="radio" name="sort" id="date" checked>
+               <label for="date">Date</label>
+            </div>
+            <div class="radio">
+               <input type="radio" name="sort" id="completed">
+               <label for="completed">Completed</label>
+            </div>
+            <span count></span>
+         </div>
+      </div>
+
+      <ul id="list">
+         <!-- <li class="item">
+            <i class="fa fa-circle-thin" task="completed" id="0"></i>
+            <p>${this is the todo}</p>
+            <i class="fa fa-trash delete" task="delete" id="0"></i>
+         </li> -->
+      </ul>
+
+      <div class="form">
+         <input type="text" placeholder="Type here..." id="todo-input">
+         <i class="fa fa-plus-circle add-todo" aria-hidden="true" onclick="addTodo()"></i>
+      </div>
+   </div>
+
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* transition: all 0.5s ease; */
+}
+
+* {
+  font-family: "Averia Serif Libre", cursive, "Lucida Sans",
+    "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
+    Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  font-size: 1.2rem;
+  background: linear-gradient(
+    to bottom right,
+    #c05de0,
+    #00a7cf,
+    #00a7cf,
+    #efe348,
+    #efe348,
+    #58cf70,
+    #58cf70,
+    #f370ff,
+    #f370ff
+  );
+  background-size: 500% 500%;
+  animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* justify-content: space-between; */
+  margin: auto;
+  min-width: 400px;
+  max-width: 500px;
+  min-height: 75vh;
+  max-height: 95vh;
+  padding: 10px;
+  /* border: 1px solid black; */
+  background-color: rgba(204, 204, 204, 0.5);
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px rgba(110, 110, 110, 0.4),
+    inset 0px 0px 5px rgba(75, 75, 75, 0.5);
+}
+
+.header {
+  padding: 10px;
+  border-bottom: 1px rgba(75, 75, 75, 0.8) solid;
+  position: relative;
+}
+
+.header > span {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #e8e8e8;
+  text-shadow: 0px 1px 5px #000000;
+}
+
+.header .sortList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: rgb(111, 111, 111);
+}
+
+.sortList .radio > input {
+  cursor: pointer;
+}
+
+#list {
+  width: 100%;
+  overflow-y: auto;
+  flex: 1;
+  transition: all 0.5s ease;
+}
+
+#list > li {
+  list-style: none;
+  margin: 0;
+}
+
+#list::-webkit-scrollbar {
+  width: 6px;
+}
+
+#list::-webkit-scrollbar-thumb {
+  background-color: rgba(75, 75, 75, 0.6);
+  border-radius: 999px;
+}
+.item {
+  display: flex;
+  justify-content: stretch;
+  align-self: center;
+  padding: 10px 2px;
+  border-bottom: 1px rgba(110, 110, 110, 0.5) solid;
+}
+
+.item > i {
+  flex: 1;
+  flex-basis: 5%;
+  cursor: pointer;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: auto;
+}
+
+/* .item > i:hover {
+  color: rgba(75, 75, 75, 0.8);
+  font-weight: 600;
+} */
+
+.item > p {
+  flex-basis: 90%;
+  font-size: 1rem;
+  margin: 0 5px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.item:hover {
+  font-weight: 800;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+  color: rgb(126, 126, 126);
+}
+
+.createdAt {
+  font-size: 0.7rem;
+  color: rgba(75, 75, 75, 0.8);
+}
+
+.container .form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px;
+  /* padding: 10px 5px; */
+}
+
+.form > input {
+  flex: 1;
+  outline: none;
+  border: none;
+  height: 2.5rem;
+  font-family: monospace;
+  font-size: 1.4rem;
+  font-weight: 800;
+  background-color: transparent;
+}
+
+.form > input:focus {
+  color: rgb(18, 39, 79);
+}
+
+.form .add-todo {
+  font-size: 1.5rem;
+}
+
+.form .add-todo:hover {
+  zoom: 1.2;
+}
+
+.header .reset {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  font-size: 1.6rem;
+  color: #e8e8e8;
+  text-shadow: 0px 1px 5px #000000;
+}
+
+.header .reset:hover {
+  transform: rotate(270deg);
+  transition: all 1s ease;
+}
